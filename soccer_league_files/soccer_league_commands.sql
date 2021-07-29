@@ -16,4 +16,5 @@ ORDER BY SUM(CASE WHEN ((g.team1_score > g.team2_score AND t1.id = g.team1_id) O
 (g.team2_score > g.team1_score AND t2.id = g.team2_id)) THEN 1 ELSE 0 END) DESC;
 
 --Side note: So I discovered that I had to use RIGHT JOIN and LEFT JOIN where I did to keep the tie game I entered from
---messing up the wins-count/including a row with an empty team name. Any hints on solving this?
+--messing up the wins-count/including a row with an empty team name. Any hints on solving this? Also, it would be very
+--helpful to be able to give a numerical ranking (rank 1, rank 2) rather than just ordering by wins count. How to do this?
